@@ -50,10 +50,11 @@ body {
 }
 
 header {
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
     position: fixed;
     width: 100%;
     z-index: 2;
+    transition: all .5s ease-in-out ;
     
 }
 
@@ -66,7 +67,8 @@ header {
   font-family: 'Roboto', sans-serif;
 }
 
-.donate:hover:focus {
+ 
+.donate:hover, .donate:focus {
   background-color: var(--red);
 }
 
@@ -75,7 +77,7 @@ header {
   justify-content: center;
 }
 .logo img {
-  width: 30%;
+  width: 20%;
 }
 
 .navigation {
@@ -99,7 +101,8 @@ header {
   width: 2em;
   height: 2px;
   border-radius: 3px;
-  background-color: var(--black);
+  /* background-color: var(--black); */
+  background-color: var(--red);
   margin-top: 8px;
   transition: all 0.3s ease-in-out;
 }
@@ -111,7 +114,8 @@ header {
   width: 2em;
   height: 2px;
   border-radius: 3px;
-  background-color: var(--black);
+  /* background-color: var(--black); */
+  background-color: var(--red);
   margin-top: 8px;
   transition: all 0.3s ease-in-out;
 }
@@ -122,7 +126,7 @@ header {
   height: 100vh;
   background-color: var(--yellow);
   top: -100%; left: 0; right: 0; bottom: 0;
-  overflow: hidden !important;
+  overflow: hidden;
   transition: all 0.3s ease-in-out;
   transform: scale(0);
   z-index: 2;
@@ -131,7 +135,7 @@ header {
 
 .nav-wrapper {
   position: relative;
-  overflow: hidden !important;
+  overflow: hidden ;
   overflow-y: auto;
   height: 100vh;
   display: flex;
@@ -148,6 +152,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 nav ul li a {
@@ -162,7 +167,7 @@ nav ul li a {
     letter-spacing: 1px;
 }
 
-nav ul li a:hover:focus {
+nav ul li a:hover, a:focus {
     color: var(--red);
 }
 
@@ -170,12 +175,12 @@ nav ul li a:hover:focus {
   transform: rotate(-45deg);
   width: 2em;
   margin-top: 25px;
-  background-color: var(--red);
+  /* background-color: var(--red); */
 }
 #toggle:checked + .hamburger .bottom-bun {
   transform: rotate(45deg);
   margin-top: -2px;
-  background-color: var(--red);
+  /* background-color: var(--red); */
 }
 
 #toggle:checked + .hamburger + .nav {
@@ -194,12 +199,14 @@ nav ul li a:hover:focus {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* change attachment to fixed for desktop */
+  background-attachment: scroll;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+
 
 .img1 {
   background-image: url(/images/children.jpg);
@@ -244,12 +251,12 @@ nav ul li a:hover:focus {
 
 
 .back-text {
-  color: var(--black);
+  color: var(--white);
   font-weight: bold;
-  background: rgba(255,255,255,0.25);
+  background: rgba(0,0,0,0.5);
   box-shadow: 20px 20px 40px -6px rgba(0,0,0,0.2);
-  backdrop-filter: blur(2.7px);
-  -webkit-backdrop-filter: blur(2.7px);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
   width: 100%;
 }
 
@@ -366,6 +373,9 @@ fieldset {
   color: var(--black);
 }
 
+.sitemap ul li a:hover , a:focus {
+  color: var(--red);
+}
 /* -----social buttons----- */
 .social ul {
   display: flex;
@@ -383,6 +393,10 @@ fieldset {
   text-decoration: none; 
   font-size: 30px; 
   color: var(--black);
+}
+
+.social ul li a:hover , a:focus {
+  color: var(--red);
 }
 /* ------contact buttons------ */
 .contact ul {
@@ -403,6 +417,9 @@ fieldset {
   color: var(--black);
 }
 
+.contact ul li a:hover , a:focus {
+  color: var(--red);
+}
 /* -----Copyright----- */
 .copyright{
   margin-bottom: 10%;
@@ -411,5 +428,15 @@ fieldset {
 .copyright a {
   color: var(--black);
 }
-
+.copyright a:hover, a:focus {
+  color: var(--red);
+}
 /* ------screen sizes------ */
+@media (min-width: 900px) {
+
+  .img-blocks {
+    /* change attachment to fixed for desktop */
+    background-attachment: fixed;
+  }
+
+}
