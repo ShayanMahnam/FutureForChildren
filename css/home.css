@@ -93,7 +93,7 @@ header {
   width: 2em;
   height: 35px;
   z-index: 3;
-  
+  cursor: pointer;
 }
 
 .hamburger .top-bun {
