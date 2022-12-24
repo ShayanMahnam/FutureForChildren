@@ -51,6 +51,17 @@ ul {
   align-items: center;
   justify-content: space-between;
 }
+.grid-pic {
+  display: grid;
+  place-items: center;
+}
+
+/* until now, only donate.html */
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -64,6 +75,7 @@ body {
   background-color: var(--yellow);
   position: fixed;
   width: 100%;
+  top: 0;
   height: var(--mobile-nav-height);
   z-index: 2;
   transition: all 0.5s ease-in-out;
@@ -295,21 +307,21 @@ footer {
   gap: 3rem;
 }
 
-form {
+footer form {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 10%;
 }
 
-legend {
+footer legend {
   margin-bottom: 10%;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
 }
 
-fieldset {
+footer fieldset {
   border: none;
   display: flex;
   align-items: center;
@@ -414,6 +426,61 @@ a:focus {
   align-content: center;
   justify-items: center;
 }
+/* about us */
+.main-aboutUs,
+.main-donateForm {
+  /*because mobile nav of index.html used position fixed for js effect so we have to add margin-top for every pages*/
+  margin-top: var(--mobile-nav-height);
+  background-color: var(--yellow);
+  gap: 1rem;
+}
+.main-aboutUs img {
+  border-radius: 10px;
+}
+.main-aboutUs .members {
+  gap: 1rem;
+}
+/* donate */
+.main-donateForm form {
+  padding: 1.5rem;
+  min-width: 30vw;
+  border: 2px solid var(--black);
+  border-radius: 10px;
+  gap: 1rem;
+}
+.main-donateForm form fieldset {
+  border: 1px solid var(--black);
+  padding: 0.5rem;
+}
+.main-donateForm legend {
+  text-align: center;
+}
+
+.main-donateForm input[type='checkbox'] {
+  display: none;
+}
+.main-donateForm input[type='checkbox'] + label::before {
+  content: '\2610';
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.main-donateForm input[type='checkbox']:checked + label::before {
+  content: '\2611';
+}
+.main-donateForm form > *:not(.main-donateForm div[class^='thing']) {
+  width: 100%;
+}
+.main-donateForm button {
+  border: 0;
+}
+.main-donateForm :is(input, textarea):not(input[type='checkbox']) {
+  background-color: var(--yellow);
+  border: 1px solid var(--black);
+  resize: none;
+  width: 100%;
+  padding: 0.1rem;
+}
+
 /* ------screen sizes------ */
 @media (min-width: 900px) {
   .img-blocks {
@@ -460,5 +527,14 @@ a:focus {
   }
   .weAreWorking {
     height: calc(100vh - var(--desktop-nav-height));
+  }
+  /* about us */
+  .main-aboutUs,
+  .main-donateForm {
+    /*becuase desktop nav use sticky so change to auto is ok every pages*/
+    margin-top: auto;
+  }
+  .main-aboutUs .members {
+    display: flex;
   }
 }

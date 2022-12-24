@@ -57,9 +57,43 @@
         </div>
     </header>
     <main>
-        <section class="weAreWorking">
-            <h1>sorry, we're working on it!</h1>  
-            <img class="work" src="./images/website-design-and-website-development.gif" alt="maintenance" width="250" height="200">
+        <section class="main-donateForm grid-pic">
+            <h1>Donate Form</h1>
+            <form action="" class="grid-pic">
+                <div class="name flex">
+                    <label for="name">Name </label>
+                    <input type="text" id="name" required></div>
+                <div class="email flex">
+                    <label for="email" id="email">Email </label>
+                    <input type="email" required>
+                </div>
+                <fieldset required>
+                    <legend>What do you want to donate?</legend>
+                    
+                    <div class="thing-clothes flex" >
+                            <input type="checkbox" id="clothes" ><label for="clothes" name="clothes">Clothes</label>
+                    </div>
+                    <div class="thing-shoes">
+                            <input type="checkbox" id="shoes"><label for="shoes" name="shoes">Shoes</label>
+                    </div>
+                        <div class="thing-money">
+                            <input type="checkbox" id="money"><label for="money" name="money">Money</label>
+                        </div>
+                        <div class="thing-food">
+                            <input type="checkbox" id="food"><label for="food" name="food">Food</label>
+                        </div>
+                        <div class="thing-others">
+                            <input type="checkbox" id="others"><label for="others" name="others">Others</label>
+                        </div>
+                </fieldset>
+
+                <div class="comment grid-pic">
+                    <label for="comment">Comment </label>
+                    <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+                    </div>
+                
+                <button type="submit" class="button">Submit</button>
+            </form>
         </section>
     </main>
 
