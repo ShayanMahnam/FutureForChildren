@@ -487,7 +487,7 @@ a:focus {
 .main-contactForm form > * {
   width: 100%;
 }
-.main-donateForm button {
+:is(.main-donateForm, .main-contactForm) button {
   border: 0;
 }
 .main-donateForm :is(input, textarea):not(input[type='checkbox']),
