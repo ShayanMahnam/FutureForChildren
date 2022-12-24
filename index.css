@@ -214,7 +214,8 @@ a:focus {
   /* change attachment to fixed for desktop */
   background-attachment: scroll;
   display: grid;
-  place-items: center;
+  align-content: center;
+  justify-items: center;
 }
 
 .img1 {
@@ -427,21 +428,36 @@ a:focus {
   justify-items: center;
 }
 /* about us */
+
 .main-aboutUs,
 .main-donateForm {
   /*because mobile nav of index.html used position fixed for js effect so we have to add margin-top for every pages*/
   margin-top: var(--mobile-nav-height);
+}
+.main-contactForm,
+.main-aboutUs,
+.main-donateForm {
   background-color: var(--yellow);
   gap: 1rem;
+  width: 100%;
+}
+.main-contactForm {
+  padding-top: 1rem;
 }
 .main-aboutUs img {
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+.main-aboutUs .aboutUsContent {
+  width: min(30rem, 60vw);
 }
 .main-aboutUs .members {
   gap: 1rem;
 }
 /* donate */
-.main-donateForm form {
+.main-donateForm form,
+.main-contactForm form {
   padding: 1.5rem;
   min-width: 30vw;
   border: 2px solid var(--black);
@@ -467,13 +483,15 @@ a:focus {
 .main-donateForm input[type='checkbox']:checked + label::before {
   content: '\2611';
 }
-.main-donateForm form > *:not(.main-donateForm div[class^='thing']) {
+.main-donateForm form > *:not(.main-donateForm div[class^='thing']),
+.main-contactForm form > * {
   width: 100%;
 }
 .main-donateForm button {
   border: 0;
 }
-.main-donateForm :is(input, textarea):not(input[type='checkbox']) {
+.main-donateForm :is(input, textarea):not(input[type='checkbox']),
+.main-contactForm :is(input, textarea) {
   background-color: var(--yellow);
   border: 1px solid var(--black);
   resize: none;
