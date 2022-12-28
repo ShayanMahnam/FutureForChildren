@@ -6,7 +6,7 @@ window.onscroll = function () {
 
 function scrollFunction() {
   //if>600px=desktop-mode, bgc use yellow. (by Susan)
-  if (window.screen.width < 601) {
+  if (window.screen.width < 880) {
     if (
       document.body.scrollTop > 400 ||
       document.documentElement.scrollTop > 400

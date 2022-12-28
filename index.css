@@ -254,6 +254,10 @@ a:focus {
   font-size: 20px;
 }
 
+.read-more:hover{
+  color: var(--red);
+}
+
 .back-text {
   color: var(--white);
   font-weight: bold;
@@ -452,7 +456,7 @@ a:focus {
   align-content: center;
   justify-items: center;
 }
-/* about us */
+/* Page-------about us------- */
 
 .main-aboutUs,
 .main-donateForm {
@@ -480,7 +484,7 @@ a:focus {
 .main-aboutUs .members {
   gap: 1rem;
 }
-/* donate */
+/* Page-------donate------- */
 .main-donateForm form,
 .main-contactForm form {
   padding: 1.5rem;
@@ -525,7 +529,7 @@ a:focus {
 }
 
 /* ------screen sizes------ */
-@media (min-width: 900px) {
+@media (min-width: 601px) {
   .img-blocks {
     /* change attachment to fixed for desktop */
     background-attachment: fixed;
@@ -533,7 +537,12 @@ a:focus {
 }
 
 /*desktop mode*/
-@media (min-width: 601px) {
+@media (min-width: 880px) {
+  .img-blocks {
+    /* change attachment to fixed for desktop */
+    background-attachment: fixed;
+  }
+
   #mobile-header {
     display: none;
   }
