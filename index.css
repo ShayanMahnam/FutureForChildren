@@ -268,6 +268,8 @@ article {
   font-family: 'Roboto', sans-serif;
 }
 
+
+
 .blocks {
   min-height: 300px;
   display: flex;
@@ -277,6 +279,29 @@ article {
   padding: 1rem;
 }
 
+
+/* ------card slider------- */
+.swiper-button-prev{
+  color: var(--black);
+}
+.swiper-button-next{
+  color: var(--black);
+}
+
+
+.card-slider-wrapper{
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  width: 70%;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  flex-direction: column;
+  gap:2rem;
+  padding: 2rem;
+}
+
+/* --------blocks--------- */
 .first-block {
   background-color: var(--yellow);
 }
