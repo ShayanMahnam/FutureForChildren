@@ -26,3 +26,19 @@ function scrollFunction() {
       'var(--yellow)';
   }
 }
+
+
+// card slider for donate 
+ 
+
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
