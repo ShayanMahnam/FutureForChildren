@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="FutureForChildren PD-buddy-group-challenge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;900&family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
@@ -47,7 +48,6 @@
             <a class="button" href="donate.html">Donate</a>
             <a class="logo" href="index.html"><img src="./images/logo-h.png" alt="future for children logo-h" width="100"
                     height="50"></a>
-            <a href="donate.html">Donate</a>
             <a href="stories-dreams.html">Stories & Dreams</a>
             <a href="activities-events.html">Activities & Events</a>
             <a href="become-volunteer.html">Become Volunteer</a>
@@ -56,10 +56,81 @@
         </div>
     </header>
     <main>
-        <section class="weAreWorking">
-            <h1>sorry, we're working on it!</h1>  
-            <img class="work" src="./images/website-design-and-website-development.gif" alt="maintenance" width="250" height="200">
-        </section>
+        <div class="flex items-center min-h-screen bg-amber-200 dark:bg-gray-900">
+  <div class="container mx-auto">
+    <div class="max-w-xl mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+      <div class="text-center">
+        <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+          Become Volunteer
+        </h1>
+        <p class="text-gray-400 dark:text-gray-400">
+          Fill up the form below, tell us about yourself and  send us a message.
+        </p>
+      </div>
+      <div class="m-7">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+          <input type="hidden" name="access_key" value="1f67ca1a-8ce7-43fa-89fc-c43ec6b983cf" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+          <div class="flex mb-6 space-x-4">
+            <div class="w-full md:w-1/2">
+              <label for="fname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">First Name</label>
+              <input type="text" name="name" id="first_name" placeholder="John" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                Please provide your first name.
+              </div>
+            </div>
+            <div class="w-full md:w-1/2">
+              <label for="lname" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Last Name</label>
+              <input type="text" name="last_name" id="lname" placeholder="Doe" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                Please provide your last name.
+              </div>
+            </div>
+          </div>
+
+          <div class="flex mb-6 space-x-4">
+            <div class="w-full md:w-1/2">
+              <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+              <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+              <div class="empty-feedback text-red-400 text-sm mt-1">
+                Please provide your email address.
+              </div>
+              <div class="invalid-feedback text-red-400 text-sm mt-1">
+                Please provide a valid email address.
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2">
+              <label for="phone" class="block text-sm mb-2 text-gray-600 dark:text-gray-400">Phone Number</label>
+              <input type="text" name="phone" id="phone" placeholder="+44 (075) 1234-567" required class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
+
+              <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+                Please provide your phone number.
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+            <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border-2 border-gray-200 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" required></textarea>
+            <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+              Please enter your message.
+            </div>
+          </div>
+          <div class="mb-6">
+            <button type="submit" class="w-full px-3 py-4 text-black bg-yellow-200 rounded-md 
+            hover:bg-red-400 focus:bg-indigo-600 focus:outline-none">
+              Send Message
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     </main>
 
     <footer>
