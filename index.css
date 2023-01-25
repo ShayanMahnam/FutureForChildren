@@ -657,6 +657,12 @@ a:focus {
   font-size: 26px;
   padding: 6rem;
 }
+
+.first-block{
+  min-height: 300px;
+  padding: 2rem;
+  font-size: 16px;
+}
 /* stories desktop */
 .stories-container{
   background-color: white;
