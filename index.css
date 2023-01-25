@@ -610,5 +610,12 @@ a:focus {
   .main-aboutUs .members {
     display: flex;
   }
+
+  /* desktop blocks */
+  .blocks {
+  min-height: auto;
+  font-size: 26px;
+  padding: 6rem;
+}
 }
 /* activities-events */
