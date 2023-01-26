@@ -811,6 +811,46 @@ a:focus {
 
 
 
+/* ------page----Stories and Dreams----- */
+.body-stories{
+  background-color: var(--yellow);
+}
+.content-stories{
+  
+  background-color: var(--yellow);
+  border-radius: 5px;
+  margin: .5rem;
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  
+}
+
+
+.stories-container{
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile-pictures{
+  width: 100px;
+}
+
+.details-stories{
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: .5rem;
+}
+
 
 /* ------screen sizes------ */
 @media (min-width: 601px) {
@@ -878,7 +918,46 @@ a:focus {
   .main-aboutUs, .members {
     display: flex;
   }
-  article,
+
+  
+
+
+  /* desktop blocks */
+  .blocks {
+  min-height: auto;
+  font-size: 26px;
+  padding: 6rem;
+}
+
+.first-block{
+  min-height: 300px;
+  padding: 2rem;
+  font-size: 16px;
+}
+/* stories desktop */
+.stories-container{
+  background-color: white;
+  border: 5px solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.profile-pictures{
+  width: 200px;
+}
+
+.details-stories{
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: .5rem;
+}
+
+
+article,
   .main-blok
   .lower-header,
   .title {
