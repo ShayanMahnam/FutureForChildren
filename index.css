@@ -546,71 +546,8 @@ a:focus {
 .is-invalid,
 .was-validated :invalid {
   border-color: #dc3545;
-}
+}/* activities-events */
 
-
-/* ------screen sizes------ */
-@media (min-width: 601px) {
-  .img-blocks {
-    /* change attachment to fixed for desktop */
-    background-attachment: fixed;
-  }
-}
-
-/*desktop mode*/
-@media (min-width: 880px) {
-  .img-blocks {
-    /* change attachment to fixed for desktop */
-    background-attachment: fixed;
-  }
-
-  #mobile-header {
-    display: none;
-  }
-  #desktop-header {
-    display: block;
-    background-color: var(--yellow);
-    position: sticky;
-    height: var(--desktop-nav-height);
-    z-index: 999;
-    top: 0;
-    transition: auto; /*cancel animation*/
-  }
-
-  #desktop-header a:not(#desktop-header .button) {
-    color: var(--black);
-    text-decoration: none;
-    font-size: min(2vmax, 1rem);
-  }
-  #desktop-header a:hover:not(#desktop-header .button) {
-    color: var(--red);
-    scale: 1.2;
-    transition: all 0.5s ease-in-out;
-  }
-
-  /* desktop-navigation */
-
-  .desktop-navigation {
-    margin: 0 1rem;
-    height: 100%;
-  }
-  .sitemap {
-    /* because there is a nav in desktop mode so remove sitemap */
-    display: none;
-  }
-  .weAreWorking {
-    height: calc(100vh - var(--desktop-nav-height));
-  }
-  /* about us */
-  .main-aboutUs,
-  .main-donateForm {
-    /*becuase desktop nav use sticky so change to auto is ok every pages*/
-    margin-top: auto;
-  }
-  .main-aboutUs, .members {
-    display: flex;
-  }
-}
 /* activities-events */
 
 .activities {
@@ -619,6 +556,7 @@ a:focus {
 	width: 100%;
 	padding: 5px;
 	color: rgb(0, 0, 0);
+  background-color: #fff9ee;
 }
 	article {
 		width: 100%;
@@ -803,10 +741,35 @@ a:focus {
 				visibility: hidden;
 				background-color: #22222200;
       }
+      /* BUTTONS */
+.activity-button {
+  background-color: var(--yellow);
+  color: #283618;
+  border: none;
+  padding: 10px 15px;
+  display: block;
+  margin: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s;
+   border-radius: 5px;
+   border: 3px solid white;
+ 
+ }
+ 
+ .activity-button:hover {
+  background-color: var(--white);
+  color: var(--black);
+   border: 3px solid black;
+ }
+ .button-link-to-become-volonteer{
+   text-decoration: none;
+ }
+ 
 				
   
 
-        @media screen and (max-width: 1024px) {
+        /* @media screen and (max-width: 1024px) {
           
             article,
             .main-blok,
@@ -814,10 +777,10 @@ a:focus {
             .subtitle {
               width: 100%;
             }
-          }
+          } */
         
         
-        @media screen and (max-width: 768px) {
+        /* @media screen and (max-width: 768px) {
           article,
           .main-blok
           .lower-header,
@@ -833,40 +796,101 @@ a:focus {
                   "img2 img3"
                   "img4 img5";
               }
-            }
+            } */
         
-        @media screen and (max-width: 425px) {
+        /* @media screen and (max-width: 425px) {
          
           article
           .main-blok
           .subtitle {
             display: none;
           }
-        }
+        } */
         
-/* BUTTONS */
-.activity-button {
- background-color: var(--yellow);
- color: #283618;
- border: none;
- padding: 10px 15px;
- display: block;
- margin: 15px;
- font-size: 1.2rem;
- cursor: pointer;
- transition: all 0.5s;
-  border-radius: 5px;
-  border: 3px solid white;
 
+
+
+
+
+/* ------screen sizes------ */
+@media (min-width: 601px) {
+  .img-blocks {
+    /* change attachment to fixed for desktop */
+    background-attachment: fixed;
+  }
+           article
+          .main-blok
+          .subtitle {
+            display: none;
+          }
 }
 
-.activity-button:hover {
- background-color: var(--white);
- color: var(--black);
-  border: 3px solid black;
-}
-.button-link-to-become-volonteer{
-  text-decoration: none;
-}
+/*desktop mode*/
+@media (min-width: 880px) {
+  .img-blocks {
+    /* change attachment to fixed for desktop */
+    background-attachment: fixed;
+  }
 
+  #mobile-header {
+    display: none;
+  }
+  #desktop-header {
+    display: block;
+    background-color: var(--yellow);
+    position: sticky;
+    height: var(--desktop-nav-height);
+    z-index: 999;
+    top: 0;
+    transition: auto; /*cancel animation*/
+  }
 
+  #desktop-header a:not(#desktop-header .button) {
+    color: var(--black);
+    text-decoration: none;
+    font-size: min(2vmax, 1rem);
+  }
+  #desktop-header a:hover:not(#desktop-header .button) {
+    color: var(--red);
+    scale: 1.2;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* desktop-navigation */
+
+  .desktop-navigation {
+    margin: 0 1rem;
+    height: 100%;
+  }
+  .sitemap {
+    /* because there is a nav in desktop mode so remove sitemap */
+    display: none;
+  }
+  .weAreWorking {
+    height: calc(100vh - var(--desktop-nav-height));
+  }
+  /* about us */
+  .main-aboutUs,
+  .main-donateForm {
+    /*becuase desktop nav use sticky so change to auto is ok every pages*/
+    margin-top: auto;
+  }
+  .main-aboutUs, .members {
+    display: flex;
+  }
+  article,
+  .main-blok
+  .lower-header,
+  .title {
+      word-break: break-all;
+    }
+
+    .main-article, 
+    .gallery {
+        grid-template-areas:
+          "img1 img1"
+          "img1 img1"
+          "img2 img3"
+          "img4 img5";
+      }
+}
