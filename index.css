@@ -546,7 +546,270 @@ a:focus {
 .is-invalid,
 .was-validated :invalid {
   border-color: #dc3545;
+}/* activities-events */
+
+/* activities-events */
+
+.activities {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 5px;
+	color: rgb(0, 0, 0);
+  background-color: #fff9ee;
 }
+	article {
+		width: 100%;
+		max-width: 1000px;
+  }
+
+		.main-blok {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 100%;
+			min-height: 400px;
+			padding: 50px;
+			border-radius: 16px;
+			color: rgba(252, 251, 248, 0.979);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+      /* transition: all 0.5s ease-in-out;    */
+     }
+
+    /* .main-blok:hover {
+      cursor: pointer;
+      background-size: 120%;
+    } */
+		
+
+			  .mini-title {
+					font-size: 1.125rem;
+					font-weight: bold;
+					/* letter-spacing: 0.4rem; */
+					text-transform: uppercase;
+					/* opacity: 0.9; */
+				}
+
+
+			.lower-header {
+				padding-top: 8rem;
+      }
+
+
+      .lower-header > span:not(:nth-child(2))::before {
+						content: ", ";
+					}
+
+					
+
+					span {
+						font-size: 0.875rem;
+					}
+				
+
+				.title {
+					/* margin: 80px 0; */
+					font-size: 4.5rem;
+					font-weight: bold;
+					/* opacity: 0.9; */
+          color: #f8f8f8;
+				}
+
+			.item-text {
+				margin-top: 12px;
+				font-size: 1.5rem;
+			}
+		
+
+
+	.main-article {
+		width: 100%;
+		margin-top: 50px;
+		padding-bottom: 50px;
+		line-height: 1;
+  }
+
+		.activities, h4 {
+			margin-top: 60px;
+			margin-bottom: 20px;
+			font-size: 2em;
+		}
+
+		.activities,p {
+			margin-bottom: 20px;
+			color: rgb(0, 0, 0);
+			font-size: 1.125em;
+		}
+
+    .pullquote{
+      font-size: 2em;
+      line-height: 1.2;
+    }
+
+		blockquote {
+			position: relative;
+			margin: 40px 0;
+			padding: 40px;
+			background-color: #e6d6a1;
+			border-radius: 16px;
+    }
+
+    blockquote::before {
+				content: url("https://icons.craftwork.design/static/media/QuotesFill.f65b03951f44e212816420b00909f4df.svg");
+				position: absolute;
+				top: -10px;
+				left: -10px;
+				transform: scale(2);
+				opacity: 0.1;
+			}
+
+			blockquote::after {
+				content: url("https://icons.craftwork.design/static/media/QuotesFill.f65b03951f44e212816420b00909f4df.svg");
+				position: absolute;
+				bottom: -10px;
+				right: -10px;
+				transform: scale(2) rotate(180deg);
+				opacity: 0.1;
+			}
+		
+
+		.gallery {
+			display: grid;
+			gap: 10px;
+			grid-template-areas:
+				"img1 img1"
+				"img2 img3"
+				;
+			min-height: 600px;
+			margin-top: 40px;
+    }
+
+			.image-item {
+				min-height: 400px;
+				background-color: #eee;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				border-radius: 8px;
+				transition: 250ms;
+      }
+
+				.image-item:hover {
+					opacity: 0.9;
+					cursor: pointer;
+          transform: scale(1.1);
+
+				}
+			
+
+			.image-1 {
+				grid-area: img1;
+			}
+			.image-2 {
+				grid-area: img2;
+			}
+			.image-3 {
+				grid-area: img3;
+			}
+			
+
+			.gallery-mask {
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				width: 100vw;
+				height: 100vh;
+				padding: 40px;
+				background-color: #22222288;
+				transition: 500ms;
+      }
+
+				.imgA {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+					transition: 500ms;
+          visibility: hidden;
+					opacity: 0;
+				}
+			
+
+			.mask-off {
+				visibility: hidden;
+				background-color: #22222200;
+      }
+      /* BUTTONS */
+.activity-button {
+  background-color: var(--yellow);
+  color: #283618;
+  border: none;
+  padding: 10px 15px;
+  display: block;
+  margin: 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s;
+   border-radius: 5px;
+   border: 3px solid white;
+ 
+ }
+ 
+ .activity-button:hover {
+  background-color: var(--white);
+  color: var(--black);
+   border: 3px solid black;
+ }
+ .button-link-to-become-volonteer{
+   text-decoration: none;
+ }
+ 
+				
+  
+
+        /* @media screen and (max-width: 1024px) {
+          
+            article,
+            .main-blok,
+            .lower-header,
+            .subtitle {
+              width: 100%;
+            }
+          } */
+        
+        
+        /* @media screen and (max-width: 768px) {
+          article,
+          .main-blok
+          .lower-header,
+          .title {
+              word-break: break-all;
+            }
+        
+            .main-article, 
+            .gallery {
+                grid-template-areas:
+                  "img1 img1"
+                  "img1 img1"
+                  "img2 img3"
+                  "img4 img5";
+              }
+            } */
+        
+        /* @media screen and (max-width: 425px) {
+         
+          article
+          .main-blok
+          .subtitle {
+            display: none;
+          }
+        } */
+        
+
+
+
 
 /* ------page----Stories and Dreams----- */
 .body-stories{
@@ -595,6 +858,11 @@ a:focus {
     /* change attachment to fixed for desktop */
     background-attachment: fixed;
   }
+           article
+          .main-blok
+          .subtitle {
+            display: none;
+          }
 }
 
 /*desktop mode*/
@@ -647,9 +915,12 @@ a:focus {
     /*becuase desktop nav use sticky so change to auto is ok every pages*/
     margin-top: auto;
   }
-  .main-aboutUs .members {
+  .main-aboutUs, .members {
     display: flex;
   }
+
+  
+
 
   /* desktop blocks */
   .blocks {
@@ -685,5 +956,20 @@ a:focus {
   gap: .5rem;
 }
 
+
+article,
+  .main-blok
+  .lower-header,
+  .title {
+      word-break: break-all;
+    }
+
+    .main-article, 
+    .gallery {
+        grid-template-areas:
+          "img1 img1"
+          "img1 img1"
+          "img2 img3"
+          "img4 img5";
+      }
 }
-/* activities-events */
