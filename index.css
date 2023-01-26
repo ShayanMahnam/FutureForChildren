@@ -917,6 +917,7 @@ a:focus {
   }
   .main-aboutUs, .members {
     display: flex;
+    flex-direction: column;
   }
 
   
